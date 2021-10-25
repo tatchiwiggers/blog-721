@@ -5,6 +5,10 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%# implements has_one_attached_photo %>
+    <%# <%= f.input :photos, as: :file %>
+
+    <%# implements has_many_attached_photos %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :body %>
   </div>

@@ -53,6 +53,9 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
+      # implements has many attached photos
       params.require(:article).permit(:title, :body, photos: [])
+      # implements has one attached photo
+      # params.require(:article).permit(:title, :body, :photos)
     end
 end
